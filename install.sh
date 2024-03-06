@@ -8,7 +8,7 @@
 ############################
 
 # dotfiles directory
-dotfiledir="${HOME}/dotfiles"
+dotfiledir="${HOME}/Git-Packages/dotfiles"
 
 # list of files/folders to symlink in ${homedir}
 files=(zshrc zprofile zprompt bashrc bash_profile bash_prompt aliases private)
@@ -24,10 +24,10 @@ for file in "${files[@]}"; do
 done
 
 # Run the MacOS Script
-./macOS.sh
+# ./macOS.sh
 
 # Run the Homebrew Script
-./brew.sh
+# ./brew.sh
 
 # Run VS Code Script
 ./vscode.sh
