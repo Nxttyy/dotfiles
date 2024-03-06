@@ -23,11 +23,6 @@ for file in "${files[@]}"; do
     ln -sf "${dotfiledir}/.${file}" "${HOME}/.${file}"
 done
 
-# Run the MacOS Script
-# ./macOS.sh
-
-# Run the Homebrew Script
-# ./brew.sh
 
 # Run VS Code Script
 ./vscode.sh
