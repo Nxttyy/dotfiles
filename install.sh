@@ -29,5 +29,8 @@ done
 
 # Run the Sublime Script
 # ./sublime.sh
+# 
+
+./vim.sh
 
 echo "Installation Complete!"
