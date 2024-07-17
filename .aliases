@@ -4,6 +4,7 @@ alias actv=" . venv/bin/activate"
 alias glog="git log"
 alias gstat="git status"
 alias py="python3.11"
+alias files="xdg-open"
 
 # Detect which `ls` flavor is in use
 if ls --color >/dev/null 2>&1; then # GNU `ls`
