@@ -3,8 +3,11 @@ alias cpj='cd "$HOME/Projs"'
 alias actv=" . venv/bin/activate"
 alias glog="git log"
 alias gstat="git status"
-alias py="python3.12"
-alias files="xdg-open"
+alias py="python3.11"
+#alias files="xdg-open"
+alias susleep="sudo pm-suspend"
+alias out="sudo pkill -u $USER"
+
 
 # tmux 
 
@@ -41,8 +44,4 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# Get OS X Software Updates
-alias update_system='sudo softwareupdate -i -a'
-
-alias clean='rm -rf ~/.Trash/*; rm -rf ~/Downloads/*'
 

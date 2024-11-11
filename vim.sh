@@ -1,5 +1,5 @@
-#sum'n here
+#!/usr/bin/env zsh
 
-cp ./vim/.vimrc ~/.vimrc
-vim -c source ~/.vimrc
-vim -c PlugInstall
+cp ./.vimrc ~/.vimrc
+# vim -c source ~/.vimrc
+# vim -c PlugInstall

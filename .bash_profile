@@ -3,12 +3,15 @@ if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-# Set PATHS
+# Set Go path
+export PATH=$PATH:/usr/local/go/bin
+
+# Set other paths if needed
 if [ -x "/opt/homebrew/bin/brew" ]; then
-    # For Apple Silicon Macs
     export PATH="/opt/homebrew/bin:$PATH"
 fi
 
+# Load Cargo (for Rust, if needed)
 . "$HOME/.cargo/env"
 
 
