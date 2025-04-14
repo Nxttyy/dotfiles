@@ -31,6 +31,6 @@ done
 # ./sublime.sh
 # 
 
-./vim.sh
+# ./vim.sh
 
 echo "Installation Complete!"

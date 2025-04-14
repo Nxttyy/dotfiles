@@ -3,8 +3,21 @@ alias cpj='cd "$HOME/Projs"'
 alias actv=" . venv/bin/activate"
 alias glog="git log"
 alias gstat="git status"
-alias py="python3.11"
+alias py="python3.12"
 alias files="xdg-open"
+
+# tmux 
+
+
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
+alias tls='tmux ls'
+alias tk='tmux kill-session -t'
+
+
+# alias wvim="nvim.exe"
+
+alias wvim="/mnt/c/Program\ Files/neovim-qt\ 0.2.19/bin/nvim-qt.exe -- --"
 
 # Detect which `ls` flavor is in use
 if ls --color >/dev/null 2>&1; then # GNU `ls`
