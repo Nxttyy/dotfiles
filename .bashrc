@@ -12,4 +12,11 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=$HOME/.local/bin:$PATH
 # Set Go path
 export PATH=$PATH:/usr/local/go/bin
+<<<<<<< HEAD
 >>>>>>> 0f53479 (new nvim config)
+=======
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+>>>>>>> 130ff40 (aliases and else)

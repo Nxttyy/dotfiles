@@ -5,8 +5,11 @@ alias glog="git log"
 alias gstat="git status"
 alias py="python3.11"
 #alias files="xdg-open"
+# for i3
 alias susleep="sudo pm-suspend"
 alias out="sudo pkill -u $USER"
+alias tgram="flatpak run org.telegram.desktop &"
+alias discord="flatpak run com.discordapp.Discord &"
 
 
 # tmux 
