@@ -1,37 +1,41 @@
-#!/usr/bin/env zsh
-############################
-# This script creates symlinks from the home directory to any desired dotfiles in $HOME/dotfiles
-# And also installs MacOS Software
-# And also installs Homebrew Packages and Casks (Apps)
-# And also sets up VS Code
-# And also sets up Sublime Text
-############################
+#!/usr/bin/env bash
 
-# dotfiles directory
-dotfiledir="${HOME}/dotfiles"
+set -e
 
-# list of files/folders to symlink in ${homedir}
-files=(zshrc zprompt bashrc bash_profile bash_prompt aliases private)
+echo "Installing Zsh..."
 
-# change to the dotfiles directory
-echo "Changing to the ${dotfiledir} directory"
-cd "${dotfiledir}" || exit
+# Detect OS and install Zsh accordingly
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  if command -v apt &> /dev/null; then
+    sudo apt update
+    sudo apt install -y zsh golang luarocks
+  elif command -v dnf &> /dev/null; then
+    sudo dnf install -y zsh
+  elif command -v pacman &> /dev/null; then
+    sudo pacman -Syu zsh --noconfirm
+  else
+    echo "Unsupported Linux package manager."
+    exit 1
+  fi
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  if command -v brew &> /dev/null; then
+    brew install zsh
+  else
+    echo "Homebrew not found. Install Homebrew first: https://brew.sh/"
+    exit 1
+  fi
+else
+  echo "Unsupported OS: $OSTYPE"
+  exit 1
+fi
 
-# create symlinks (will overwrite old dotfiles)
-for file in "${files[@]}"; do
-    echo "Creating symlink to $file in home directory."
-    ln -sf "${dotfiledir}/.${file}" "${HOME}/.${file}"
-done
+# Print installed version
+zsh_version=$(zsh --version)
+echo "Zsh installed: $zsh_version"
+
+  chsh -s "$(command -v zsh)"
+  echo "Zsh set as default shell."
 
 
-# Run VS Code Script
-# ./vscode.sh
-
-# Run the Sublime Script
-# ./sublime.sh
-# 
-
-#./vim.sh
-#./nvim.sh
-
-echo "Installation Complete!"
+# run main script
+./install_main.sh

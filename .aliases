@@ -1,20 +1,18 @@
 # Shortcuts
-alias cpj='cd "$HOME/Projs"'
+alias cdev='cd "$HOME/Dev"'
 alias actv=" . venv/bin/activate"
 alias glog="git log"
 alias gstat="git status"
-alias py="python3.11"
+alias py="python3"
 #alias files="xdg-open"
 # for i3
 alias susleep="sudo pm-suspend"
 alias out="sudo pkill -u $USER"
-alias tgram="flatpak run org.telegram.desktop &"
-alias discord="flatpak run com.discordapp.Discord &"
+# alias tgram="flatpak run org.telegram.desktop &"
+# alias discord="flatpak run com.discordapp.Discord &"
 
 
 # tmux 
-
-
 alias ta='tmux attach -t'
 alias tn='tmux new -s'
 alias tls='tmux ls'

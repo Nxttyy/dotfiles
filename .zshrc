@@ -8,7 +8,7 @@ for file in ~/.{zprompt,aliases,private}; do
 done;
 unset file;
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

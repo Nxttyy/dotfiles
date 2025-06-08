@@ -12,7 +12,7 @@ if [ -x "/opt/homebrew/bin/brew" ]; then
 fi
 
 # Load Cargo (for Rust, if needed)
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 
 # win nvim
