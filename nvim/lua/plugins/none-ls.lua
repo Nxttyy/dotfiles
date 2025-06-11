@@ -24,11 +24,23 @@ return {
 
 		local sources = {
 			diagnostics.checkmake,
-			formatting.prettier.with({ filetypes = { "html", "json", "yaml", "markdown" } }),
+			formatting.prettier.with({
+				filetypes = {
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+					"html",
+					"json",
+					"yaml",
+					"markdown",
+				},
+				extra_args = { "--single-quote", "--jsx-single-quote" },
+			}),
 			formatting.stylua,
 			formatting.shfmt.with({ args = { "-i", "4" } }),
 			formatting.terraform_fmt,
-			formatting.clang_format, -- Add clang-format here
+			formatting.clang_format,
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
 			require("none-ls.formatting.ruff_format"),
 		}
@@ -52,4 +64,4 @@ return {
 			end,
 		})
 	end,
-}
+} 

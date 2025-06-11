@@ -86,6 +86,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
+-- Format TypeScript and JavaScript files on save
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+-- 	pattern = "*.ts,*.tsx,*.js,*.jsx",
+-- 	callback = function()
+-- 		vim.lsp.buf.format({ async = true })
+-- 	end,
+-- })
+
 -- Autoformat Go templates (*.tmpl) on save
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.tmpl",
